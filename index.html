@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reymark & Carla | Wedding Invitation</title>
+
+    <meta name="description" content="Together with our families, we invite you to celebrate our wedding.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Reymark & Carla | Wedding Invitation">
+    <meta property="og:description" content="Together with our families, we invite you to celebrate our special day.">
+    <meta property="og:image" content="https://nobodyp413.github.io/Invitation/image/preview.png">
+    <meta property="og:url" content="https://nobodyp413.github.io/Invitation/">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Reymark & Carla | Wedding Invitation">
+    <meta name="twitter:description" content="Together with our families, we invite you to celebrate our special day.">
+    <meta name="twitter:image" content="https://nobodyp413.github.io/Invitation/image/preview.png">
+
+    <!-- Browser tab icon -->
+    <link rel="icon" type="image/png" href="image/favicon.png">
+        <link href="css/output.css" rel="stylesheet">
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <style>
+        .st0{
+            stroke: black;
+            stroke-width: 5px;
+            stroke-dasharray: 3000;
+            animation: effectText 5s ease-in;
+        }
+        @keyframes effectText {
+            from{
+                fill:transparent;
+                stroke-dashoffset: 3000;
+            }to{
+                fill: black;
+                stroke-dashoffset: 0;
+            }
+        }
+        .st1{
+            stroke: black;
+            stroke-width: 10px;
+            stroke-dasharray: 2000;
+            stroke-dashoffset: 2000;
+
+            opacity: 0; /* invisible at start */
+            animation: effectText2 5s ease-in 1s forwards;
+        }
+
+        @keyframes effectText2 {
+            from{
+                opacity: 0;
+                fill: transparent;
+                stroke-dashoffset: 2000;
+            }
+            to{
+                opacity: 1;        /* 100% visible */
+                fill: black;
+                stroke-dashoffset: 0;
+            }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .fade-in-image {
+            animation: fadeIn 2s ease-in-out;
+        }
+        .fade-in-text {
+            animation: fadeIn 2s ease-in 3s forwards;
+        }
+
+        
+        .image-diagonal {
+            position: relative;
+            animation: diagonalFloat 5s ease-in-out forwards;
+        }
+        .fade-in-shake {
+            display: inline-block; /* required for transform */
+            transform-origin: center center;
+            animation:
+                fadeIn 2s ease-in-out forwards,
+                wobble 1s ease-in-out 2s infinite;
+        }
+        @keyframes wobble {
+            0%, 100% {
+                transform: rotate(0deg);
+            }
+
+            20% {
+                transform: rotate(-8deg); /* left side up */
+            }
+
+            40% {
+                transform: rotate(8deg); /* right side up */
+            }
+
+            60% {
+                transform: rotate(-6deg);
+            }
+
+            80% {
+                transform: rotate(6deg);
+            }
+        }
+        @keyframes diagonalFloat {
+            from {
+                transform: translate(600px, -100px) scale(0.4);
+            }
+            to {
+                transform: translate(0, 0) scale(1);
+            }
+        }
+
+/* Container */
+.church-scene {
+  position: relative;
+  perspective: 1200px;
+  overflow: hidden;
+  cursor: pointer;
+  background: black;
+}
+
+/* Inside church */
+.church-scene .inside {
+  position: absolute;
+  inset: 0;
+  background: url("image/inside_church.png") center/cover no-repeat;
+
+  /* transform: scale(1.1) translateZ(-500px); */
+  z-index: 1;
+}
+
+/* Doors */
+.church-scene .doors {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  z-index: 3;
+}
+
+.church-scene .door {
+  width: 50%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1.6s ease-in-out;
+}
+
+/* Hinges */
+.church-scene .left  { transform-origin: left center; }
+.church-scene .right { transform-origin: right center; }
+
+/* OPEN STATE (inward) */
+.church-scene.open .left {
+  transform: rotateY(90deg);
+}
+
+.church-scene.open .right {
+  transform: rotateY(-90deg);
+}
+
+.church-scene.open .inside {
+  animation: enterChurch 6.5s cubic-bezier(.16, .84, .44, 1) forwards;
+  animation-delay: 0.8s; /* slight wait after door opens */
+}
+/* @keyframes enterChurch {
+
+  0% {
+    transform: scale(1.1) translateZ(-500px) translateY(0);
+  }
+
+  35% {
+    transform: scale(1.3) translateZ(-150px) translateY(-2px);
+  }
+
+  60% {
+    transform: scale(1.6) translateZ(80px) translateY(-6px);
+  }
+
+  100% {
+    transform: scale(2.2) translateZ(260px) translateY(-10px);
+  }
+} */
+
+
+.zoom-away {
+  animation: zoomAway 5s ease-in forwards;
+  transform-origin: center;
+}
+
+@keyframes zoomAway {
+  from {
+    transform: scale(1);
+    opacity: 1;
+    filter: blur(0);
+  }
+  to {
+    transform: scale(8);
+    opacity: 0;
+    filter: blur(6px);
+  }
+}
+body.entered {
+  background: url("image/inside_church.png") center/cover no-repeat fixed;
+  transition: background 1.5s ease-in-out;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+    </style>
+</head>
+<body class=" relative flex items-center justify-center h-dvh bg-[#f5ebe0] border-4">
+    <img class="absolute top-0 left-0 sm:w-80 sm:h-80 w-30 h-30  fade-in-image" src="image/UpperLeft.svg">
+    <img class="absolute top-0 right-0 sm:w-80 sm:h-80 w-30 h-30  fade-in-image" src="image/UpperRight.svg">
+    <img class="absolute bottom-0 left-0 sm:w-80 sm:h-80 w-30 h-30  fade-in-image" src="image/LowerLeft.svg">
+    <img class="absolute bottom-0 right-0 sm:w-80 sm:h-80 w-30 h-30  fade-in-image" src="image/LowerRight.svg">
+    <div id="pageContent" class="flex flex-col mx-auto ">
+        <div class="relative flex flex-col">
+            <img class="sm:w-200 sm:h-40 w-[320px] h-30  fade-in-shake" src="image/YoureInvited.svg">
+            <div class="flex justify-center">
+                <div class="relative">
+                    <img class="sm:w-200 sm:h-125 w-[320px] h-62.5s  fade-in-image" src="image/BambooAndFlowers.png" alt="" style="z-index: 2 ;">
+                    <div class="absolute sm:bottom-38 bottom-17 left-42 sm:left-105 rounded-tr-4xl rounded-tl-4xl church-scene w-6 h-16 sm:w-15 sm:h-35" id="churchScene">
+                        <div class="inside"></div>
+                        <div class="doors">
+                            <img src="image/Left_door.png" class="door left" alt="">
+                            <img src="image/right_door.png" class="door right" alt="">
+                        </div>
+                    </div>
+                    <!-- <p class="absolute  left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white/50 text-7xl">Save the date</p> -->
+                </div>
+            </div>
+            <div class="absolute sm:bottom-0 bottom-3 sm:left-1/4 left-1/3">
+                <img class="sm:w-50 sm:h-75 w-16 h-25 fade-in-image image-diagonal " src="image/adv.png" alt="">
+            </div>
+        </div>
+        <p class="sm:text-2xl text-base text-center mt-4 fade-in-text opacity-0">
+          Click or Tap anywhere to enter the church
+        </p>
+
+    </div>
+    <!-- <audio id="myAudio" src="/audio/buksan.mp3"></audio> -->
+    <audio id="myAudio" src="audio/intro_music.mp3"></audio>
+<script>
+  const scene = document.getElementById("churchScene");
+  const page = document.body;
+  const content = document.getElementById("pageContent");
+
+  window.addEventListener("pointerdown", () => {
+    if (!scene.classList.contains("open")) {
+
+      // 1️⃣ Open doors
+      scene.classList.add("open");
+      
+        var audio = document.getElementById("myAudio");
+        audio.play();
+      // 2️⃣ Wait for doors to open
+      setTimeout(() => {
+        content.classList.add("zoom-away");
+      }, 1600); // matches door transition
+
+      // 3️⃣ Switch full-page background AFTER zoom-away
+      setTimeout(() => {
+      //   page.classList.add("entered");
+      // window.location.href = "inside.html";
+      sessionStorage.setItem('audioAllowed', 'true');
+      window.location.href = "home.html";
+      }, 3800); // door + zoom-away timing
+    }
+  });
+</script>
+  
+</body>
+</html>

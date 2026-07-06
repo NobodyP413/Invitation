@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>You're Invited!!!</title>
+
+<link href="css/output.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+
+/*  animation */
+/* 
+.{
+opacity:0;
+transform:translateY(60px);
+transition: all .8s ease;
+}
+
+..is-visible{
+opacity:1;
+transform:translateY(0);
+} */
+
+/* Floating Button */
+/* .section-indicator {
+    position: fixed;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    flex-direction: column;
+    gap: 12px;
+    z-index: 9999;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: white;
+    border: 1px solid #a3c9a5;
+    cursor: pointer;
+    transition: .3s;
+    box-shadow: 0 0 20px 5px #c3e7c5;
+}
+
+.dot.active {
+    background: white;
+    transform: scale(2);
+} */
+#topBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  /* background: #ffffff; */
+  color: #C0D6C1;
+  /* padding: 8px 10px; */
+  border-radius: 50%;
+  font-size: 24px;
+  cursor: pointer;
+  display: none;
+  /* border: 2px solid #C0D6C1; */
+  box-shadow: 0 4px 12px rgba(0,0,0,.2);
+}
+
+.music-btn {
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    border: none;
+    border-radius: 50%;
+    /* background: rgba(255, 255, 255, 0.9); */
+    color: #C0D6C1;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .25s ease;
+    z-index: 9999;
+}
+
+.music-btn:hover {
+    transform: scale(1.08);
+    /* background: white; */
+}
+
+.music-btn:active {
+    transform: scale(.95);
+}
+.cursive{
+font-family:'Great Vibes',cursive;
+}
+
+
+/* Custom Entrance Animations */
+        @keyframes fadeInLeft {
+            from { opacity: 0; transform: translateX(-30px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        @keyframes fadeInRight {
+            from { opacity: 0; transform: translateX(30px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .animate-left { animation: fadeInLeft 1s ease-out forwards; }
+        .animate-right { animation: fadeInRight 1s ease-out forwards; }
+        .animate-center { animation: fadeIn 1.2s ease-out forwards; }
+.fade-in-image {
+            animation: fadeIn 2s ease-in-out;
+        }
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+</style>
+
+</head>
+
+<body class="m-0 font-sans">
+
+<!-- NAVBAR -->
+
+<!-- <nav class="fixed w-full bg-white shadow z-50">
+    <div class="max-w-6xl mx-auto flex justify-center gap-10 py-4">
+
+        <a href="#s1" class="navLink font-semibold">Home</a>
+        <a href="#s2" class="navLink font-semibold">About</a>
+        <a href="#s3" class="navLink font-semibold">Services</a>
+        <a href="#s4" class="navLink font-semibold">Portfolio</a>
+        <a href="#s5" class="navLink font-semibold">Contact</a>
+
+    </div>
+</nav> -->
+
+<!-- SCROLL CONTAINER -->
+
+<div class="h-screen overflow-y-scroll snap-y snap-mandatory scroll-smooth custom-scrollbar overflow-x-hidden">
+
+<!-- SECTION 1 -->
+
+<section 
+    style="background-image: url('image/inside_church.png'); background-size: cover; background-position: center;"
+    id="s1" 
+    class="observe-section snap-center h-screen flex items-center justify-center bg-[#f5ebe0] text-white ">
+    <div class="flex flex-col justify-center items-center w-full">
+        <p class="flex sm:text-6xl text-2xl text-white right-4 ring-white font-serif">October 17, 2026 | Saturday</p>
+        <!-- <button class="md:border-4 border-2 text-white px-4 mt-2 text-2xl transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:shadow-xl hover:shadow-white/20 hover:cursor-pointer"> RSVP </button> -->
+        <div class="flex flex-col items-center mt-20 bg-black/25 w-full py-24">
+            <p class="sm:text-8xl text-6xl text-white cursive">Mark <span class="sm:text-3xl text-xl">&</span> Carla</p>
+            <p class="sm:text-4xl text-3xl text-white cursive">are getting married !</p>
+            
+            <div class="flex flex-wrap items-center justify-center gap-2 md:gap-4 text-center">
+                <div class="flex flex-col p-2 bg-neutral rounded-box text-neutral-content w-16 sm:w-20 md:w-24">
+                    <span id="days" class="font-mono text-3xl sm:text-4xl md:text-5xl leading-none">00</span>
+                    <span class="text-[10px] sm:text-xs uppercase font-bold mt-1">days</span>
+                </div>
+
+                <div class="flex flex-col p-2 bg-neutral rounded-box text-neutral-content w-16 sm:w-20 md:w-24">
+                    <span id="hours" class="font-mono text-3xl sm:text-4xl md:text-5xl leading-none">00</span>
+                    <span class="text-[10px] sm:text-xs uppercase font-bold mt-1">hours</span>
+                </div>
+
+                <div class="flex flex-col p-2 bg-neutral rounded-box text-neutral-content w-16 sm:w-20 md:w-24">
+                    <span id="mins" class="font-mono text-3xl sm:text-4xl md:text-5xl leading-none">00</span>
+                    <span class="text-[10px] sm:text-xs uppercase font-bold mt-1">mins</span>
+                </div>
+
+                <div class="flex flex-col p-2 bg-neutral rounded-box text-neutral-content w-16 sm:w-20 md:w-24">
+                    <span id="secs" class="font-mono text-3xl sm:text-4xl md:text-5xl leading-none">00</span>
+                    <span class="text-[10px] sm:text-xs uppercase font-bold mt-1">secs</span>
+                </div>
+            </div>
+            <p class="mt-20 animate-bounce sm:hidden flex">Swipe up to begin.</p>
+        </div>
+    </div>
+</section>
+
+<!-- SECTION 2 -->
+
+<section 
+    style="background-image: url('image/bg_white.png'); background-size: cover; background-position: center;"
+    id="s2" 
+    class="observe-section snap-center h-screen flex items-center justify-center bg-[#C0D6C1]/10 text-[#C0D6C1] text-5xl">
+    <div class="flex flex-col h-full py-4">
+        <!-- Ceremony -->
+        <div class="flex flex-row h-[50%] ml-2">
+            <div class="flex flex-col sm:w-[40%] w-[70%] h-full border-4 justify-center items-center px-4 py-4 text-white bg-[#C0D6C1] shadow-lg">
+                <p class="sm:text-4xl text-2xl  cursive mt-2">Ceremony</p>
+                <p class="sm:text-2xl text-lg font-bold">Bamboo Organ Church</p>
+                <p class="sm:text-xl text-base italic">Diocesan Shrine and Parish of St. Joseph</p>
+                <img class="sm:w-60 sm:h-50 w-32 h-24" data-animate="fade-in-image" src="image/bamboo_church.png" alt="">
+                <button
+                    onclick="window.location.href='https://maps.app.goo.gl/Xzfqjri2QoGgBtQW6'"  
+                    class="sm:text-lg text-sm rounded-lg border w-full mt-2 bg-white text-[#C0D6C1] font-bold hover:bg-[#C0D6C1] hover:text-white py-2">
+                    View Map
+                </button>
+                <button
+                    onclick="window.location.href='https://ul.waze.com/ul?place=ChIJvwAR_dPNlzMRRKSCgMYwUis&ll=14.48113460%2C120.98138300&navigate=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location'" 
+                    class="sm:text-lg text-sm rounded-lg border w-full mt-2 bg-white text-[#C0D6C1] font-bold hover:bg-[#C0D6C1] hover:text-white py-2">
+                    View Waze
+                </button>
+            </div>
+            <img class="sm:w-[50%] w-[30%] h-full" data-animate="fade-in-image" src="image/church_drawing.svg" alt="">
+        </div>
+        <!-- Reception -->
+        <div class="flex flex-row h-[50%] mt-2">
+            <img class="sm:w-[50%] w-[30%] h-full" data-animate="fade-in-image" src="image/reception_drawing.svg" alt="">
+            <div class="flex flex-col sm:w-[40%] w-[70%] h-full border-4 justify-center items-center px-4 py-4 text-white bg-[#C0D6C1] shadow-lg">
+                <p class="sm:text-4xl text-2xl  cursive mt-2">Reception</p>
+                <p class="sm:text-2xl text-lg font-bold">Villar Sipag Event Hall</p>
+                <!-- <p class="text-xl italic"></p> -->
+                <img class="sm:w-60 sm:h-50 w-32 h-24" data-animate="fade-in-image" src="image/villar_sipag.png" alt="">
+                <button
+                    onclick="window.location.href='https://maps.app.goo.gl/RgTZ458zxueph7NE7'" 
+                    class="sm:text-lg text-sm rounded-lg border w-full mt-2 bg-white text-[#C0D6C1] font-bold hover:bg-[#C0D6C1] hover:text-white py-2">
+                    View Map
+                </button>
+                <button
+                    onclick="window.location.href='https://ul.waze.com/ul?place=ChIJjeFuxBXPlzMRh_m9Dx6-UUo&ll=14.47374650%2C120.98133920&navigate=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location'"
+                    class="sm:text-lg text-sm rounded-lg border w-full mt-2 bg-white text-[#C0D6C1] font-bold hover:bg-[#C0D6C1] hover:text-white py-2">
+                    View Waze
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SECTION 3 -->
+
+<section 
+    style="background-image: url('image/bg_white.png'); background-size: cover; background-position: center;"
+    id="s3" 
+    class="observe-section snap-center h-screen flex items-center justify-center py-20 px-4  bg-[#C0D6C1] text-white text-5xl overflow-x-hidden">
+    <div class="relative w-full max-w-2xl">
+        <div class="absolute left-1/2 top-0 bottom-0 w-0.5 bg-[#4a4a4a] -translate-x-1/2" data-animate="animate-center"></div>
+
+        <div class="space-y-20">
+            
+            <div class="relative flex items-center justify-center">
+                <!-- <div class="absolute left-0 w-[50%] text-right pr-12 text-2xl opacity-0" data-animate="animate-left">♡</div> -->
+                <div class="absolute left-1/2 -translate-x-full pr-6 font-bold tracking-widest text-[#4a4a4a] whitespace-nowrap opacity-0 sm:text-6xl text-4xl" data-animate="animate-left" style="animation-delay: 0.2s;animation-fill-mode: both;">
+                    ♡
+                </div>
+                <div class="z-10 w-3 h-3 bg-[#4a4a4a] rounded-full ring-4 ring-[#f5f4f0] opacity-0" data-animate="animate-center" style="animation-delay: 0.2s;animation-fill-mode: both;"></div>
+                <div class="absolute left-1/2 ml-8 w-[40%] text-[#4a4a4a] opacity-0 text-nowrap" data-animate="animate-right" style="animation-delay: 0.2s;animation-fill-mode: both;">
+                    <p class="font-bold sm:text-4xl text-xl">2:00 PM</p>
+                    <p class="sm:text-2xl text-lg text-left serif font-semibold cursive text-wrap text-black tracking-widest">Seating Begins</p>
+                </div>
+            </div>
+
+            <div class="relative flex items-center justify-center">
+                <!-- <div class="absolute left-0 w-[40%] text-right pr-12 text-2xl opacity-0" data-animate="animate-left">💍</div> -->
+                <div class="absolute left-1/2 -translate-x-full pr-6 font-bold text-[#4a4a4a] whitespace-nowrap opacity-0" data-animate="animate-left" style="animation-delay: 0.4s;animation-fill-mode: both;">
+                    <p class="font-bold sm:text-4xl text-xl">3:00 PM</p>
+                    <p class="sm:text-2xl text-lg text-right serif font-semibold cursive text-black tracking-widest">Ceremony</p>
+                </div>
+                <div class="z-10 w-3 h-3 bg-[#4a4a4a] rounded-full ring-4 ring-[#f5f4f0] opacity-0" data-animate="animate-center" style="animation-delay: 0.4s;animation-fill-mode: both;"></div>
+                <div class="absolute left-1/2 ml-8 w-[40%] text-left serif font-semibold tracking-[0.2em] text-[#4a4a4a] opacity-0 text-nowrap cursive" data-animate="animate-right" style="animation-delay: 0.4s;animation-fill-mode: both;">
+                    <img class="sm:w-20 sm:h-20 w-10 h-10" data-animate="fade-in-image" src="image/ceremony.png" alt="">
+                </div>
+            </div>
+
+            <div class="relative flex items-center justify-center">
+                <!-- <div class="absolute left-0 w-[40%] text-right pr-12 text-2xl opacity-0" data-animate="animate-left">🥂</div> -->
+                <div class="absolute left-1/2 -translate-x-full pr-6 font-bold tracking-widest text-[#4a4a4a] whitespace-nowrap opacity-0" data-animate="animate-left" style="animation-delay: 0.6s;animation-fill-mode: both;">
+                    <img class="sm:w-20 sm:h-20 w-10 h-10" data-animate="fade-in-image" src="image/wine_glass.png" alt="">
+                </div>
+                <div class="z-10 w-3 h-3 bg-[#4a4a4a] rounded-full ring-4 ring-[#f5f4f0] opacity-0" data-animate="animate-center" style="animation-delay: 0.6s;animation-fill-mode: both;"></div>
+                <div class="absolute left-1/2 ml-8 w-[40%] text-left serif font-semibold text-[#4a4a4a] opacity-0 text-nowrap " data-animate="animate-right" style="animation-delay: 0.6s;animation-fill-mode: both;">
+                    <p class="font-bold  sm:text-4xl text-xl">5:00 PM</p>
+                    <p class="sm:text-2xl text-lg text-left serif font-semibold cursive text-black tracking-widest">Reception</p>
+                </div>
+            </div>
+
+            <div class="relative flex items-center justify-center">
+                <!-- <div class="absolute left-0 w-[40%] text-right pr-12 text-2xl opacity-0" data-animate="animate-left">🍴</div> -->
+                <div class="absolute left-1/2 -translate-x-full pr-6 font-bold  text-[#4a4a4a] whitespace-nowrap opacity-0" data-animate="animate-left" style="animation-delay: 0.8s;animation-fill-mode: both;">
+                    <p class="font-bold sm:text-4xl text-xl">6:00 PM</p>
+                    <p class="sm:text-2xl text-lg text-right serif font-semibold cursive text-black tracking-widest">Dinner</p>
+                </div>
+                <div class="z-10 w-3 h-3 bg-[#4a4a4a] rounded-full ring-4 ring-[#f5f4f0] opacity-0" data-animate="animate-center" style="animation-delay: 0.8s;animation-fill-mode: both;"></div>
+                <div class="absolute left-1/2 ml-8 w-[40%] text-left serif font-semibold tracking-[0.2em] text-[#4a4a4a] opacity-0 text-nowrap cursive" data-animate="animate-right" style="animation-delay: 0.8s;animation-fill-mode: both;">
+                    <img class="sm:w-20 sm:h-20 w-10 h-10" data-animate="fade-in-image" src="image/lunch.png" alt="">
+                </div>
+            </div>
+
+            <div class="relative flex items-center justify-center">
+                <!-- <div class="absolute left-0 w-[40%] text-right pr-12 text-2xl opacity-0" data-animate="animate-left">💃</div> -->
+                <div class="absolute left-1/2 -translate-x-full pr-6 font-bold tracking-widest text-[#4a4a4a] whitespace-nowrap opacity-0" data-animate="animate-left" style="animation-delay: 1.0s;animation-fill-mode: both;">
+                    <img class="sm:w-20 sm:h-20 w-10 h-10" data-animate="fade-in-image" src="image/first_dance.png" alt="">
+                </div>
+                <div class="z-10 w-3 h-3 bg-[#4a4a4a] rounded-full ring-4 ring-[#f5f4f0] opacity-0" data-animate="animate-center" style="animation-delay: 1.0s;animation-fill-mode: both;"></div>
+                <div class="absolute left-1/2 ml-8 w-[40%] text-left serif font-semibold text-[#4a4a4a] opacity-0 text-nowrap " data-animate="animate-right" style="animation-delay: 1.0s;animation-fill-mode: both;">
+                    <p class="font-bold  sm:text-4xl text-xl">7:00 PM</p>
+                    <p class="sm:text-2xl text-lg tracking-widest text-left serif font-semibold cursive text-wrap text-black">First Dance</p>
+                </div>
+            </div>
+
+            <div class="relative flex items-center justify-center">
+                <!-- <div class="absolute left-0 w-[40%] text-right pr-12 text-2xl opacity-0" data-animate="animate-left">🥳</div> -->
+                <div class="absolute left-1/2 -translate-x-full pr-6 font-bold text-[#4a4a4a] whitespace-nowrap opacity-0" data-animate="animate-left" style="animation-delay: 1.2s;animation-fill-mode: both;">
+                    <p class="font-bold sm:text-4xl text-xl">7:30 PM</p>
+                    <p class="sm:text-2xl text-lg text-right serif font-semibold cursive text-black  tracking-widest">Party</p>
+                </div>
+                <div class="z-10 w-3 h-3 bg-[#4a4a4a] rounded-full ring-4 ring-[#f5f4f0] opacity-0" data-animate="animate-center" style="animation-delay: 1.2s;animation-fill-mode: both;"></div>
+                <div class="absolute left-1/2 ml-8 w-[40%] text-left serif font-semibold tracking-[0.2em] text-[#4a4a4a] opacity-0 text-nowrap cursive" data-animate="animate-right" style="animation-delay: 1.2s;animation-fill-mode: both;">
+                    <img class="sm:w-20 sm:h-20 w-10 h-10" data-animate="fade-in-image" src="image/party.png" alt="">
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</section>
+
+<!-- SECTION 4 -->
+
+<section 
+    style="background-image: url('image/bg_white.png'); background-size: cover; background-position: center;"
+    id="s4" 
+    class="observe-section snap-center h-screen sm:flex hidden flex-col items-center   bg-white text-black  pt-10 space-y-10">
+    <div class="text-2xl font-bold text-[#4a4a4a] whitespace-nowrap opacity-0" data-animate="animate-center" style="animation-fill-mode: both;">
+        Principal Sponsors
+    </div>
+    <div class="flex items-center justify-center">
+        <div class="relative w-full max-w-2xl">
+            <div class="space-y-10 text-lg">
+                <div class="relative flex items-center justify-center text-2xl">
+                    <div class="absolute left-1/2 -translate-x-full pr-6 font-bold tracking-widest text-[#4a4a4a] whitespace-nowrap opacity-0 cursive" data-animate="animate-left" style="animation-delay: 0.4s;animation-fill-mode: both;">Michael Angelo Bolanio</div>
+                    <div class="absolute left-1/2 ml-8 w-[40%] text-left serif font-semibold tracking-[0.2em] text-[#4a4a4a] opacity-0 text-nowrap cursive" data-animate="animate-right" style="animation-delay: 0.4s;animation-fill-mode: both;">Vernie Manrique Bolanio</div>
+                </div>
+                <div class="relative flex items-center justify-center text-2xl">
+                    <div class="absolute left-1/2 -translate-x-full pr-6 font-bold tracking-widest text-[#4a4a4a] whitespace-nowrap opacity-0 cursive" data-animate="animate-left" style="animation-delay: 0.4s;animation-fill-mode: both;">Lito Perez</div>
+                    <div class="absolute left-1/2 ml-8 w-[40%] text-left serif font-semibold tracking-[0.2em] text-[#4a4a4a] opacity-0 text-nowrap cursive" data-animate="animate-right" style="animation-delay: 0.4s;animation-fill-mode: both;">Annabelle Perez</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="flex items-center justify-center mt-10">
+        <div class="relative w-full max-w-2xl">
+            <div class="space-y-10 text-lg">
+                <div class="relative flex items-center justify-center text-3xl">
+                    <div class="absolute left-1/2 -translate-x-full pr-6 font-bold tracking-widest text-[#4a4a4a] whitespace-nowrap opacity-0" data-animate="animate-left" style="animation-delay: 0.2s;animation-fill-mode: both;">Best Man</div>
+                    <div class="absolute left-1/2 ml-8 w-[40%] text-left serif font-bold tracking-[0.2em] text-[#4a4a4a] opacity-0 text-nowrap " data-animate="animate-right" style="animation-delay: 0.2s;animation-fill-mode: both;">Maiden of Honor</div>
+                </div>
+                <div class="relative flex items-center justify-center text-2xl">
+                    <div class="absolute left-1/2 -translate-x-full pr-6 font-bold tracking-widest text-[#4a4a4a] whitespace-nowrap opacity-0 cursive" data-animate="animate-left" style="animation-delay: 0.4s;animation-fill-mode: both;">Allan Joseph Rabanillo</div>
+                    <div class="absolute left-1/2 ml-8 w-[40%] text-left serif font-bold tracking-[0.2em] text-[#4a4a4a] opacity-0 text-nowrap cursive" data-animate="animate-right" style="animation-delay: 0.4s;animation-fill-mode: both;">Veronica Costillas</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="flex items-center justify-center mt-4">
+        <div class="relative w-full max-w-2xl">
+            <div class="space-y-10 text-lg">
+                <div class="relative flex items-center justify-center text-3xl">
+                    <div class="absolute left-1/2 -translate-x-full pr-6 font-bold tracking-widest text-[#4a4a4a] whitespace-nowrap opacity-0" data-animate="animate-left" style="animation-delay: 0.6s;animation-fill-mode: both;">Groomsmen</div>
+                    <div class="absolute left-1/2 ml-8 w-[40%] text-left serif font-bold tracking-[0.2em] text-[#4a4a4a] opacity-0 text-nowrap " data-animate="animate-right" style="animation-delay: 0.6s;animation-fill-mode: both;">Bridesmaids</div>
+                </div>
+                <div class="relative flex items-center justify-center">
+                    <div class="absolute left-1/2 -translate-x-full pr-6 font-bold tracking-widest text-[#4a4a4a] whitespace-nowrap opacity-0 cursive" data-animate="animate-left" style="animation-delay: 0.8s;animation-fill-mode: both;">Reggie Lloyd Rabanillo</div>
+                    <div class="absolute left-1/2 ml-8 w-[40%] text-left serif font-semibold tracking-[0.2em] text-[#4a4a4a] opacity-0 text-nowrap cursive" data-animate="animate-right" style="animation-delay: 0.8s;animation-fill-mode: both;">Ashley Rianne Rabanillo</div>
+                </div>
+
+                <div class="relative flex items-center justify-center">
+                    <div class="absolute left-1/2 -translate-x-full pr-6 font-bold tracking-widest text-[#4a4a4a] whitespace-nowrap opacity-0 cursive" data-animate="animate-left" style="animation-delay: 1.0s;animation-fill-mode: both;">Johnrey Roxas</div>
+                    <div class="absolute left-1/2 ml-8 w-[40%] text-left serif font-semibold tracking-[0.2em] text-[#4a4a4a] opacity-0 text-nowrap cursive" data-animate="animate-right" style="animation-delay: 1.0s;animation-fill-mode: both;">Charisse Jasmine Roxas</div>
+                </div>
+
+                <div class="relative flex items-center justify-center">
+                    <div class="absolute left-1/2 -translate-x-full pr-6 font-bold tracking-widest text-[#4a4a4a] whitespace-nowrap opacity-0 cursive" data-animate="animate-left" style="animation-delay: 1.2s;animation-fill-mode: both;">Marko Matula</div>
+                    <div class="absolute left-1/2 ml-8 w-[40%] text-left serif font-semibold tracking-[0.2em] text-[#4a4a4a] opacity-0 text-nowrap cursive" data-animate="animate-right" style="animation-delay: 1.2s;animation-fill-mode: both;">Cherry Mae Roxas</div>
+                </div>
+
+                <div class="relative flex items-center justify-center">
+                    <div class="absolute left-1/2 -translate-x-full pr-6 font-bold tracking-widest text-[#4a4a4a] whitespace-nowrap opacity-0 cursive" data-animate="animate-left" style="animation-delay: 1.4s;animation-fill-mode: both;">Aldrin Obsanga</div>
+                    <div class="absolute left-1/2 ml-8 w-[40%] text-left serif font-semibold tracking-[0.2em] text-[#4a4a4a] opacity-0 text-nowrap cursive" data-animate="animate-right" style="animation-delay: 1.4s;animation-fill-mode: both;">Ninna Rabara</div>
+                </div>
+
+                <div class="relative flex items-center justify-center">
+                    <div class="absolute left-1/2 -translate-x-full pr-6 font-bold tracking-widest text-[#4a4a4a] whitespace-nowrap opacity-0 cursive" data-animate="animate-left" style="animation-delay: 1.6s;animation-fill-mode: both;">Jeffrey Sudio</div>
+                    <div class="absolute left-1/2 ml-8 w-[40%] text-left serif font-semibold tracking-[0.2em] text-[#4a4a4a] opacity-0 text-nowrap cursive" data-animate="animate-right" style="animation-delay: 1.6s;animation-fill-mode: both;">Gia Bautista</div>
+                </div>
+
+                <div class="relative flex items-center justify-center">
+                    <div class="absolute left-1/2 -translate-x-full pr-6 font-bold tracking-widest text-[#4a4a4a] whitespace-nowrap opacity-0 cursive" data-animate="animate-left" style="animation-delay: 1.8s;animation-fill-mode: both;">Ediver Mateo</div>
+                    <div class="absolute left-1/2 ml-8 w-[40%] text-left serif font-semibold tracking-[0.2em] text-[#4a4a4a] opacity-0 text-nowrap cursive" data-animate="animate-right" style="animation-delay: 1.8s;animation-fill-mode: both;">Claire Suazo</div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="text-2xl font-bold text-[#4a4a4a] whitespace-nowrap opacity-0" data-animate="animate-center" style="animation-delay: 2.2s;animation-fill-mode: both;">
+        Secondary Sponsors
+    </div>
+    <div class="relative mt-10">
+        <div class="mt-4 absolute left-1/2 -translate-x-full pr-6  font-bold tracking-widest text-[#4a4a4a] whitespace-nowrap opacity-0" data-animate="animate-left" style="animation-delay: 2.4s;animation-fill-mode: both;">
+            <div class="text-right">Ring bearer</div>
+            <div class="cursive text-2xl">Ethan Jabonete</div>
+        </div>
+        <div class="absolute left-1/2 -translate-x-1/2 -translate-y-full font-bold tracking-widest text-[#4a4a4a] opacity-0 text-nowrap" data-animate="animate-center" style="animation-delay: 2.4s;animation-fill-mode: both;">
+            <div class="absolute left-1/2 -translate-x-1/2 -translate-y-full">Bible Bearer</div>
+            <div class="cursive text-2xl">Jaycee Rabanillo</div>
+        </div>
+        <div class="mt-4 absolute left-1/2 ml-8 w-[40%] text-left serif font-bold tracking-[0.2em] text-[#4a4a4a] opacity-0 text-nowrap " data-animate="animate-right" style="animation-delay: 2.4s;animation-fill-mode: both;">
+            <div >Coin Bearer</div>
+            <div class="cursive text-2xl">John Noel Roxas</div>
+        </div>
+    </div>
+    
+        <div class="font-bold tracking-widest text-[#4a4a4a] opacity-0 text-nowrap mt-10 text-center" data-animate="animate-center" style="animation-delay: 2.6s;animation-fill-mode: both;">
+            <div class="">Flower Girl</div>
+            <div class="cursive text-2xl">Clarie Zamora</div>
+            <div class="cursive text-2xl">Chloe Pellejera</div>
+        </div>
+    
+</section>
+
+<!-- Mobile -->
+ <section 
+     style="background-image: url('image/bg_white.png'); background-size: cover; background-position: center;"
+     id="s4a" 
+     class="observe-section snap-center h-screen flex sm:hidden flex-col items-center justify-center  bg-white text-black  ">
+    <div class="text-2xl font-bold text-[#4a4a4a] whitespace-nowrap opacity-0 mb-8" data-animate="animate-center" style="animation-fill-mode: both;">
+        Principal Sponsors
+    </div>
+    <div class="flex items-center justify-center">
+        <div class="relative w-full max-w-2xl">
+            <div class="text-lg">
+                <div class="relative flex items-center justify-center text-2xl">
+                    <div class="font-bold text-black tracking-[0.2em] whitespace-nowrap opacity-0 cursive" data-animate="animate-left" style="animation-delay: 0.4s;animation-fill-mode: both;">Michael Angelo Bolanio</div>
+                </div>
+                <div class="relative flex items-center justify-center text-2xl">
+                    <div class="serif font-semibold tracking-[0.2em] text-black opacity-0 text-nowrap cursive" data-animate="animate-right" style="animation-delay: 0.4s;animation-fill-mode: both;">Vernie Manrique Bolanio</div>
+                </div>
+                <div class="relative flex items-center justify-center text-2xl mt-4">
+                    <div class="font-bold tracking-[0.2em] text-black whitespace-nowrap opacity-0 cursive" data-animate="animate-left" style="animation-delay: 0.4s;animation-fill-mode: both;">Lito Perez</div>
+                </div>
+                <div class="relative flex items-center justify-center text-2xl">
+                    <div class="serif font-semibold tracking-[0.2em] text-black opacity-0 text-nowrap cursive" data-animate="animate-right" style="animation-delay: 0.4s;animation-fill-mode: both;">Annabelle Perez</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="flex items-center justify-center mt-5">
+        <div class="relative w-full max-w-2xl">
+            <div class="text-lg">
+                <div class="relative flex items-center justify-center text-2xl mb-2">
+                    <div class="font-bold  text-[#4a4a4a] whitespace-nowrap opacity-0" data-animate="animate-left" style="animation-delay: 0.2s;animation-fill-mode: both;">Best Man</div>
+                </div>
+                <div class="relative flex items-center justify-center text-2xl mb-10">
+                    <div class="font-bold tracking-[0.2em] text-black whitespace-nowrap opacity-0 cursive" data-animate="animate-left" style="animation-delay: 0.4s;animation-fill-mode: both;">Allan Joseph Rabanillo</div>
+                </div>
+                <div class="relative flex items-center justify-center text-2xl mb-2">
+                    <div class="font-bold  text-[#4a4a4a] opacity-0 text-nowrap " data-animate="animate-right" style="animation-delay: 0.2s;animation-fill-mode: both;">Maiden of Honor</div>
+                </div>
+                <div class="relative flex items-center justify-center text-2xl">
+                    <div class="font-bold tracking-[0.2em] text-black opacity-0 text-nowrap cursive" data-animate="animate-right" style="animation-delay: 0.4s;animation-fill-mode: both;">Veronica Costillas</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</section>
+
+<section 
+    style="background-image: url('image/bg_white.png'); background-size: cover; background-position: center;"
+    id="s4b" 
+    class="observe-section snap-center h-screen flex sm:hidden flex-col items-center justify-center   bg-white text-black  ">
+    <div class="flex">
+        <div class="w-full">
+            <div class="space-y-2 text-lg">
+                <div class=" flex items-center justify-center text-3xl mb-8">
+                    <div class="font-bold text-[#4a4a4a] whitespace-nowrap opacity-0" data-animate="animate-center" style="animation-delay: 0.2s;animation-fill-mode: both;">Groomsmen</div>
+                </div>
+                <div class=" flex items-center justify-center text-2xl">
+                    <div class="font-bold tracking-[0.2em] text-black whitespace-nowrap opacity-0 cursive" data-animate="animate-center" style="animation-delay: 0.4s;animation-fill-mode: both;">Reggie Lloyd Rabanillo</div>
+                </div>
+
+                <div class=" flex items-center justify-center text-2xl">
+                    <div class="font-bold tracking-[0.2em] text-black whitespace-nowrap opacity-0 cursive" data-animate="animate-center" style="animation-delay: 0.6s;animation-fill-mode: both;">Johnrey Roxas</div>
+                </div>
+
+                <div class=" flex items-center justify-center text-2xl">
+                    <div class="font-bold tracking-[0.2em] text-black whitespace-nowrap opacity-0 cursive" data-animate="animate-center" style="animation-delay: 0.8s;animation-fill-mode: both;">Marko Matula</div>
+                </div>
+
+                <div class=" flex items-center justify-center text-2xl">
+                    <div class="font-bold tracking-[0.2em] text-black whitespace-nowrap opacity-0 cursive" data-animate="animate-center" style="animation-delay: 1s;animation-fill-mode: both;">Aldrin Obsanga</div>
+                </div>
+
+                <div class=" flex items-center justify-center text-2xl">
+                    <div class="font-bold tracking-[0.2em] text-black whitespace-nowrap opacity-0 cursive" data-animate="animate-center" style="animation-delay: 1.2s;animation-fill-mode: both;">Jeffrey Sudio</div>
+                </div>
+
+                <div class=" flex items-center justify-center text-2xl">
+                    <div class="font-bold tracking-[0.2em] text-black whitespace-nowrap opacity-0 cursive" data-animate="animate-center" style="animation-delay: 1.4s;animation-fill-mode: both;">Ediver Mateo</div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</section>
+<section 
+    style="background-image: url('image/bg_white.png'); background-size: cover; background-position: center;"
+    id="s4c" 
+    class="observe-section snap-center h-screen flex sm:hidden flex-col items-center justify-center   bg-white text-black  ">
+    <div class="flex">
+        <div class="w-full">
+            <div class="space-y-2 text-lg">
+                <div class="relative flex items-center justify-center text-3xl mt-10 mb-8">
+                    <div class="text-left serif font-bold text-[#4a4a4a] opacity-0 text-nowrap " data-animate="animate-center" style="animation-delay: 0.2s;animation-fill-mode: both;">Bridesmaids</div>
+                </div>
+                <div class="relative flex items-center justify-center text-2xl">
+                    <div class="text-left serif font-semibold tracking-[0.2em] text-black opacity-0 text-nowrap cursive" data-animate="animate-center" style="animation-delay: 0.4s;animation-fill-mode: both;">Ashley Rianne Rabanillo</div>
+                </div>
+
+                <div class="relative flex items-center justify-center text-2xl">
+                    <div class="text-left serif font-semibold tracking-[0.2em] text-black opacity-0 text-nowrap cursive" data-animate="animate-center" style="animation-delay: 0.6s;animation-fill-mode: both;">Charisse Jasmine Roxas</div>
+                </div>
+
+                <div class="relative flex items-center justify-center text-2xl">
+                    <div class="text-left serif font-semibold tracking-[0.2em] text-black opacity-0 text-nowrap cursive" data-animate="animate-center" style="animation-delay: 0.8s;animation-fill-mode: both;">Cherry Mae Roxas</div>
+                </div>
+
+                <div class="relative flex items-center justify-center text-2xl">
+                    <div class="text-left serif font-semibold tracking-[0.2em] text-black opacity-0 text-nowrap cursive" data-animate="animate-center" style="animation-delay: 1s;animation-fill-mode: both;">Ninna Rabara</div>
+                </div>
+
+                <div class="relative flex items-center justify-center text-2xl">
+                    <div class="text-left serif font-semibold tracking-[0.2em] text-black opacity-0 text-nowrap cursive" data-animate="animate-center" style="animation-delay: 1.2s;animation-fill-mode: both;">Gia Bautista</div>
+                </div>
+
+                <div class="relative flex items-center justify-center text-2xl">
+                    <div class="text-left serif font-semibold tracking-[0.2em] text-black opacity-0 text-nowrap cursive" data-animate="animate-center" style="animation-delay: 1.4s;animation-fill-mode: both;">Claire Zamora</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section 
+    style="background-image: url('image/bg_white.png'); background-size: cover; background-position: center;"
+    id="s4d" 
+    class="observe-section snap-center h-screen flex sm:hidden flex-col items-center justify-center  bg-white text-black  ">
+    <div class="text-2xl font-bold text-[#4a4a4a] whitespace-nowrap opacity-0" data-animate="animate-center" style="animation-delay: 0.2s;animation-fill-mode: both;">
+        Secondary Sponsors
+    </div>
+    <div class="flex items-center justify-center mt-8">
+        <div class="relative w-full max-w-2xl">
+            <div class="text-lg">
+                <div class="relative flex items-center justify-center text-xl mb-2">
+                    <div class="font-bold  text-[#4a4a4a] whitespace-nowrap opacity-0" data-animate="animate-center" style="animation-delay: 0.4s;animation-fill-mode: both;">Bible Bearer</div>
+                </div>
+                <div class="relative flex items-center justify-center text-2xl mb-4">
+                    <div class="font-bold tracking-[0.2em] text-black whitespace-nowrap opacity-0 cursive" data-animate="animate-center" style="animation-delay: 0.6s;animation-fill-mode: both;">Jaycee Rabanillo</div>
+                </div>
+                <div class="relative flex items-center justify-center text-xl mb-2">
+                    <div class="serif font-bold  text-[#4a4a4a] opacity-0 text-nowrap " data-animate="animate-center" style="animation-delay: 0.8s;animation-fill-mode: both;">Ring bearer</div>
+                </div>
+                <div class="relative flex items-center justify-center text-2xl mb-4">
+                    <div class="serif font-bold tracking-[0.2em] text-black opacity-0 text-nowrap cursive" data-animate="animate-center" style="animation-delay: 1s;animation-fill-mode: both;">Ethan Jabonete</div>
+                </div>
+                <div class="relative flex items-center justify-center text-xl mb-2">
+                    <div class="serif font-bold  text-[#4a4a4a] opacity-0 text-nowrap " data-animate="animate-center" style="animation-delay: 1.2s;animation-fill-mode: both;">Coin Bearer</div>
+                </div>
+                <div class="relative flex items-center justify-center text-2xl mb-4">
+                    <div class="serif font-bold tracking-[0.2em] text-black opacity-0 text-nowrap cursive" data-animate="animate-center" style="animation-delay: 1.4s;animation-fill-mode: both;">John Noel Roxas</div>
+                </div>
+                <div class="relative flex items-center justify-center text-xl mb-2">
+                    <div class="serif font-bold  text-[#4a4a4a] opacity-0 text-nowrap " data-animate="animate-center" style="animation-delay: 1.6s;animation-fill-mode: both;">Flower Girl</div>
+                </div>
+                <div class="relative flex items-center justify-center text-2xl mb-2">
+                    <div class="serif font-bold tracking-[0.2em] text-black opacity-0 text-nowrap cursive" data-animate="animate-center" style="animation-delay: 1.8s;animation-fill-mode: both;">Clarie Zamora</div>
+                </div>
+                <div class="relative flex items-center justify-center text-2xl mb-2">
+                    <div class="serif font-bold tracking-[0.2em] text-black opacity-0 text-nowrap cursive" data-animate="animate-center" style="animation-delay: 2s;animation-fill-mode: both;">Chloe Pellejera</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- SECTION 5 -->
+
+<section 
+    style="background-image: url('image/bg_white.png'); background-size: cover; background-position: center;"
+    id="s5" 
+    class="observe-section snap-center h-screen flex items-center justify-center bg-[#C0D6C1]/10 text-[#C0D6C1] text-5xl">
+    <div class="flex flex-col h-full py-4">
+        <!-- Ceremony -->
+        <div class="flex flex-row h-[50%] ml-2 max-w-5xl">
+            <div class="flex flex-col sm:w-[40%] w-[70%] h-full border-4 justify-center items-center px-4 py-4 text-white bg-[#C0D6C1] shadow-lg">
+                <p class="sm:text-4xl text-2xl  cursive mt-2">Your Guide</p>
+                <p class="sm:text-2xl text-lg font-bold text-nowrap">ON CAPTURED MOMENTS</p>
+                <p class="sm:text-xl text-base text-center italic sm:mx-4 mx-1">Please share your photos & videos with us using our official hashtag!</p>
+                
+                <p class="sm:text-2xl text-base text-center italic mt-8">#aREYMARKabledaywithCARLA</p>
+                
+            </div>
+            <div class="sm:w-[50%] w-[30%] h-full flex justify-center items-center">
+
+                <img class="sm:w-96 sm:h-96 w-32 h-32"  data-animate="fade-in-image" src="image/camera.png" alt="">
+            </div>
+        </div>
+        <!-- Reception -->
+        <div class="flex flex-row h-[50%] mt-2 max-w-5xl">
+            <div class="sm:w-[50%] w-[30%] h-full flex justify-center items-center">
+
+                <img class="sm:w-96 sm:h-96 w-32 h-32"  data-animate="fade-in-image" src="image/gift.png" alt="">
+            </div>
+            <div class="flex flex-col sm:w-[40%] w-[70%] h-full border-4 justify-center items-center px-4 py-4 text-white bg-[#C0D6C1] shadow-lg">
+                <p class="sm:text-4xl text-2xl  cursive mt-2">Your Guide</p>
+                <p class="sm:text-2xl text-lg font-bold">ON GIFTS</p>
+                
+                <p class="sm:text-xl text-sm text-center italic sm:mt-8 mt-2 sm:mx-4 mx-1">Your presence at our wedding is the only present we require, but if you desire to give nonetheless, a <span class="font-bold">MONETARY</span> gift is the one we suggest.</p>
+                <!-- <p class="sm:text-xl text-base text-center italic mt-2">But if you desire to give nonetheless, a MONETARY gift is the one we suggest</p> -->
+                <!-- <p class="text-xl italic"></p> -->
+                <img class="sm:w-60 sm:h-50 w-32 h-24" data-animate="fade-in-image" src="image/qr.jpg" alt="">
+            </div>
+        </div>
+    </div>
+</section>
+<!-- SECTION 6 -->
+
+<section 
+  style="background-image: url('image/bg_white.png'); background-size: cover; background-position: center;"
+  id="s6" 
+  class="observe-section snap-center h-screen flex  items-center justify-center bg-[#C0D6C1] text-white text-5xl   overflow-hidden py-4">
+    <div class="flex flex-col max-w-xl mx-auto fade">
+
+        <div class="p-12 md:p-20  max-w-2xl w-full text-center">
+            
+            <div class="mb-8">
+                <h2 class="serif-title text-gray-700 text-sm md:text-base font-bold mb-6">
+                    DRESS CODE: CASUAL
+                </h2>
+                <p class="serif-title text-black text-xs md:text-sm leading-relaxed ">
+                    We kindly encourage our guests to <br class="hidden md:block">
+                    wear these colors for our special day
+                </p>
+            </div>
+
+            <div class="flex justify-center items-center gap-3 md:gap-5 mt-10">
+                <div class="w-12 h-12 md:w-16 md:h-16 rounded-full shadow-lg border-4 border-white" style="background-color: #6b705c;"></div>
+                
+                <div class="w-12 h-12 md:w-16 md:h-16 rounded-full shadow-lg border-4 border-white" style="background-color: #C0D6C1;"></div>
+                
+                <div class="w-12 h-12 md:w-16 md:h-16 rounded-full shadow-lg border-4 border-white" style="background-color: #ddbea9;"></div>
+                
+                <div class="w-12 h-12 md:w-16 md:h-16 rounded-full shadow-lg border-4 border-white" style="background-color: #b7b7a4;"></div>
+                
+                <div class="w-12 h-12 md:w-16 md:h-16 rounded-full shadow-lg border-4 border-white" style="background-color: #ffe8d6;"></div>
+            </div>
+
+        </div>
+        
+        <div class="mx-4 text-black mb-10">
+            <p class="text-3xl text-center ">
+                We hope to see you from the altar.
+            </p>
+            <p class="text-base text-center sm:mx-4 mx-8">
+                We kindly request your response by October 1, 2026.
+            </p>
+        </div>
+        <button
+            id="rsvp_btn" 
+            class="md:border-4 border-2 text-white bg-[#C0D6C1] rounded-full px-4 mt-2 mx-auto text-4xl transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:shadow-xl hover:shadow-white/20 hover:cursor-pointer animate-bounce"> 
+            RSVP 
+        </button>
+        <p class="serif-title text-center text-black text-xs md:text-sm mt-4 mx-16">
+                    Please click the RSVP button to be redirected to the RSVP form.
+        </p>
+    </div>
+</section>
+</div>
+
+<!-- BACK TO TOP BUTTON -->
+<!-- <div class="section-indicator px-1 py-2 rounded-full shadow-2xl hidden">
+    <span class="dot shadow" data-target="s1"></span>
+    <span class="dot" data-target="s2"></span>
+    <span class="dot" data-target="s3"></span>
+    <span class="dot" data-target="s4a"></span>
+    <span class="dot" data-target="s4b"></span>
+    <span class="dot" data-target="s4c"></span>
+    <span class="dot" data-target="s4d"></span>
+    <span class="dot" data-target="s5"></span>
+    <span class="dot" data-target="s6"></span>
+</div> -->
+<div id="topBtn" class="sm:px-6 sm:py-4 px-2 py-1 bg-white/80">
+  <i class="fa-solid fa-angles-up"></i>
+</div>
+<button id="musicBtn" class="music-btn sm:w-14 sm:h-14 w-11 h-11 bg-white/80">
+    <i class="fa-solid fa-volume-high"></i>
+</button>
+<audio id="myAudio" loop>
+        <source src="audio/bg-music.mp3" type="audio/mpeg">
+    </audio>
+<script src="js/home.js"></script>
+
+</body>
+</html>
